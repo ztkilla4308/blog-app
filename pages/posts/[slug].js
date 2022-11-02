@@ -1,5 +1,5 @@
 import React from 'react'
-import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from '../graphql/queries'
+import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from '../../graphql/queries'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import Head from 'next/head'
 import { serialize } from 'next-mdx-remote/serialize'

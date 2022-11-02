@@ -2,7 +2,7 @@ import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { GET_HOME_POSTS } from './graphql/queries'
+import { GET_HOME_POSTS } from '../graphql/queries'
 
 export default function Home({ posts }) {
   console.log(posts)
