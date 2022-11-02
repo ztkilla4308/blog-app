@@ -27,6 +27,7 @@ function Post({ post, markdown }) {
           </div>
           <picture>
             <img
+              alt={post.title}
               src={post.thumbnail.url}
               className="object-cover object-center w-full h-1/3 mb-8"
             />

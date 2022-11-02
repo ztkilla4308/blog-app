@@ -20,6 +20,7 @@ export default function Home({ posts }) {
               <Link href={'/posts/' + post.slug} key={post.slug}>
                 <picture>
                   <img
+                    alt={post.title}
                     src={post.thumbnail.url}
                     className="object-cover w-full h-80 object-center"
                   />
