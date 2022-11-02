@@ -19,17 +19,18 @@ function Post({ post, markdown }) {
         <title>{post.title}</title>
         <link rel="icon" href={post.thumbnail.url} />
       </Head>
-      <main className="grid grid-cols-12 mx-auto">
+      <main className="grid grid-cols-12 mx-auto container">
         <article className="col-span-8 col-start-3">
           <div className="flex justify-between items-end mb-3">
             <h2 className="text-2xl font-bold">{post.title}</h2>
             <p>{moment(post.publishedAt).format('DD.MM.YYYY')}</p>
           </div>
-
-          <img
-            src={post.thumbnail.url}
-            className="object-cover object-center w-full h-1/3 mb-8"
-          />
+          <picture>
+            <img
+              src={post.thumbnail.url}
+              className="object-cover object-center w-full h-1/3 mb-8"
+            />
+          </picture>
           <div className="text-xl">
             <MDXRemote {...markdown} />
           </div>
