@@ -5,14 +5,13 @@ import Head from 'next/head'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import moment from 'moment'
-
+import Footer from '../components/Footer.jsx'
 const client = new ApolloClient({
   uri: 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9yahioc1ii101uobtuf63s5/master',
   cache: new InMemoryCache(),
 })
 
 function Post({ post, markdown }) {
-  console.log(post)
   return (
     <>
       <Head>
@@ -29,12 +28,13 @@ function Post({ post, markdown }) {
             <img
               alt={post.title}
               src={post.thumbnail.url}
-              className="object-cover object-center w-full h-1/3 mb-8"
+              className="object-cover object-center w-full h-96 mb-8"
             />
           </picture>
-          <div className="text-xl">
+          <div className="text-xl break-all flex flex-col overflow-hidden">
             <MDXRemote {...markdown} />
           </div>
+          <Footer />
         </article>
       </main>
     </>

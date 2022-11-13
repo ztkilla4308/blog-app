@@ -26,6 +26,7 @@ const GET_INDIVIDUAL_POST = gql`
   query ($slugUrl: String!) {
     blogPosts(where: { slug: $slugUrl }) {
       title
+      slug
       content {
         markdown
       }
